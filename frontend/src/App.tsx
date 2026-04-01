@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Dashboard from './pages/Dashboard';
 import Masters from './pages/Masters';
 import Applicants from './pages/Applicants';
+import Admissions from './pages/Admissions';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -65,7 +66,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/masters" element={<Masters/>} />
               <Route path="/applicants" element={<Applicants/>} />
-              
+              <Route path="/admissions" element={<Admissions/>} />
             </Routes>
           </main>
         </div>
