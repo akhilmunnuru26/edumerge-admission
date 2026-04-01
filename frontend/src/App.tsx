@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Dashboard from './pages/Dashboard';
 import Masters from './pages/Masters';
+import Applicants from './pages/Applicants';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -63,6 +64,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/masters" element={<Masters/>} />
+              <Route path="/applicants" element={<Applicants/>} />
+              
             </Routes>
           </main>
         </div>
