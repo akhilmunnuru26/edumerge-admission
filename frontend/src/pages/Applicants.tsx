@@ -70,23 +70,23 @@ export default function Applicants() {
           <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700">Full Name *</label>
-              <input type="text" name="full_name" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <input type="text" name="full_name" required placeholder='Enter Full Name' className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Email *</label>
-              <input type="email" name="email" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <input type="email" name="email" required placeholder='Enter Email' className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Phone *</label>
-              <input type="tel" name="phone" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <input type="tel" name="phone" required placeholder='Enter Phone Number' className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Date of Birth *</label>
-              <input type="date" name="date_of_birth" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <input type="date" name="date_of_birth" required placeholder='Enter Date of Birth' className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Gender *</label>
-              <select name="gender" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+              <select name="gender" required className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
@@ -94,7 +94,7 @@ export default function Applicants() {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Category *</label>
-              <select name="category" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+              <select name="category" required className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                 <option value="GM">GM</option>
                 <option value="SC">SC</option>
                 <option value="ST">ST</option>
@@ -105,22 +105,22 @@ export default function Applicants() {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Qualifying Exam</label>
-              <input type="text" name="qualifying_exam" placeholder="KCET" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <input type="text" name="qualifying_exam" placeholder="KCET" className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Marks Obtained</label>
-              <input type="number" step="0.01" name="marks_obtained" placeholder="95.5" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <input type="number" step="0.01" name="marks_obtained" placeholder="95.5" className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Entry Type *</label>
-              <select name="entry_type" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+              <select name="entry_type" required className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                 <option value="Regular">Regular</option>
                 <option value="Lateral">Lateral</option>
               </select>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Quota Type *</label>
-              <select name="quota_type" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+              <select name="quota_type" required className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                 <option value="KCET">KCET</option>
                 <option value="COMEDK">COMEDK</option>
                 <option value="Management">Management</option>
@@ -128,26 +128,26 @@ export default function Applicants() {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Admission Mode *</label>
-              <select name="admission_mode" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+              <select name="admission_mode" required className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                 <option value="Government">Government</option>
                 <option value="Management">Management</option>
               </select>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Allotment Number</label>
-              <input type="text" name="allotment_number" placeholder="KCET2026001234" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <input type="text" name="allotment_number" placeholder="KCET2026001234" className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div className="md:col-span-2">
               <label className="block text-sm font-medium text-gray-700">Address</label>
-              <textarea name="address" rows={2} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+              <textarea name="address" rows={2} className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Parent Name</label>
-              <input type="text" name="parent_name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <input type="text" name="parent_name" placeholder='Enter Parent Name' className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Parent Phone</label>
-              <input type="tel" name="parent_phone" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+              <label className="block text-sm font-medium text-gray-700">Parent Phone Number</label>
+              <input type="tel" name="parent_phone" placeholder='Enter Parent Phone Number' className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
             </div>
             <div className="md:col-span-2">
               <button type="submit" disabled={createMutation.isPending} className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 disabled:bg-gray-400">

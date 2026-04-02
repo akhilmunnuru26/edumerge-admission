@@ -83,6 +83,12 @@ export default function Masters() {
     e.currentTarget.reset();
   };
 
+  console.log('Institutions:', institutions);
+  console.log('Campuses:', campuses);
+  console.log('Departments:', departments);
+  console.log('Programs:', programs);
+  console.log('Quotas:', quotas);
+
   return (
     <div className="space-y-6">
       <div>
@@ -120,7 +126,7 @@ export default function Masters() {
                 <select
                   name="department_id"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 >
                   <option value="">Select Department</option>
                   {departments?.departments?.map((dept: any) => (
@@ -137,7 +143,7 @@ export default function Masters() {
                   type="text"
                   name="name"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   placeholder="Computer Science Engineering"
                 />
               </div>
@@ -148,7 +154,7 @@ export default function Masters() {
                   type="text"
                   name="code"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   placeholder="CSE"
                 />
               </div>
@@ -159,7 +165,7 @@ export default function Masters() {
                   <select
                     name="course_type"
                     required
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   >
                     <option value="UG">UG</option>
                     <option value="PG">PG</option>
@@ -171,7 +177,7 @@ export default function Masters() {
                   <select
                     name="entry_type"
                     required
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   >
                     <option value="Regular">Regular</option>
                     <option value="Lateral">Lateral</option>
@@ -184,7 +190,7 @@ export default function Masters() {
                 <select
                   name="admission_mode"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 >
                   <option value="Government">Government</option>
                   <option value="Management">Management</option>
@@ -199,7 +205,7 @@ export default function Masters() {
                     name="academic_year"
                     required
                     defaultValue="2026"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   />
                 </div>
 
@@ -209,7 +215,7 @@ export default function Masters() {
                     type="number"
                     name="total_intake"
                     required
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                     placeholder="100"
                   />
                 </div>
@@ -252,7 +258,7 @@ export default function Masters() {
                 <select
                   name="program_id"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 >
                   <option value="">Select Program</option>
                   {programs?.programs?.map((program: any) => (
@@ -268,7 +274,7 @@ export default function Masters() {
                 <select
                   name="quota_type"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 >
                   <option value="KCET">KCET</option>
                   <option value="COMEDK">COMEDK</option>
@@ -282,7 +288,7 @@ export default function Masters() {
                   type="number"
                   name="allocated_seats"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   placeholder="50"
                 />
               </div>

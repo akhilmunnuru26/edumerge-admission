@@ -90,7 +90,7 @@ export default function Admissions() {
             <select
               value={selectedApplicant}
               onChange={(e) => setSelectedApplicant(e.target.value)}
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="block p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
             >
               <option value="">Choose applicant...</option>
               {applicants?.applicants?.map((app: any) => (
@@ -109,7 +109,7 @@ export default function Admissions() {
                 setSelectedProgram(e.target.value);
                 setSelectedQuota('');
               }}
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="block p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
             >
               <option value="">Choose program...</option>
               {programs?.programs?.map((prog: any) => (
@@ -126,7 +126,7 @@ export default function Admissions() {
               value={selectedQuota}
               onChange={(e) => setSelectedQuota(e.target.value)}
               disabled={!selectedProgram}
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
+              className="block p-2 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
             >
               <option value="">Choose quota...</option>
               {quotas?.quotas?.map((quota: any) => (

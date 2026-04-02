@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Dashboard from './pages/Dashboard';
-import Masters from './pages/Masters';
-import Applicants from './pages/Applicants';
-import Admissions from './pages/Admissions';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Dashboard from "./pages/Dashboard";
+import Masters from "./pages/Masters";
+import Applicants from "./pages/Applicants";
+import Admissions from "./pages/Admissions";
+import { NavLink } from "react-router-dom";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,30 +31,26 @@ function App() {
                     </h1>
                   </div>
                   <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <Link
-                      to="/"
-                      className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                    >
-                      Dashboard
-                    </Link>
-                    <Link
-                      to="/masters"
-                      className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                    >
-                      Master Setup
-                    </Link>
-                    <Link
-                      to="/applicants"
-                      className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                    >
-                      Applicants
-                    </Link>
-                    <Link
-                      to="/admissions"
-                      className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                    >
-                      Admissions
-                    </Link>
+                    {[
+                      { name: "Dashboard", to: "/" },
+                      { name: "Masters", to: "/masters" },
+                      { name: "Applicants", to: "/applicants" },
+                      { name: "Admissions", to: "/admissions" },
+                    ].map((item) => (
+                      <NavLink
+                        key={item.name}
+                        to={item.to}
+                        className={({ isActive }) =>
+                          `inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                            isActive
+                              ? "border-indigo-500 text-gray-900"
+                              : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                          }`
+                        }
+                      >
+                        {item.name}
+                      </NavLink>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -64,9 +61,9 @@ function App() {
           <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/masters" element={<Masters/>} />
-              <Route path="/applicants" element={<Applicants/>} />
-              <Route path="/admissions" element={<Admissions/>} />
+              <Route path="/masters" element={<Masters />} />
+              <Route path="/applicants" element={<Applicants />} />
+              <Route path="/admissions" element={<Admissions />} />
             </Routes>
           </main>
         </div>
