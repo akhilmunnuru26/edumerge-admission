@@ -7,6 +7,33 @@ const admissionController = require('../controllers/admissionController');
 
 
 // ============================================
+// MASTER DATA ROUTES
+// ============================================
+
+// Institutions
+router.post('/institutions', masterController.createInstitution);
+router.get('/institutions', masterController.getInstitutions);
+
+// Campuses
+router.post('/campuses', masterController.createCampus);
+router.get('/campuses', masterController.getCampuses);
+
+// Departments
+router.post('/departments', masterController.createDepartment);
+router.get('/departments', masterController.getDepartments);
+
+// Programs
+router.post('/programs', masterController.createProgram);
+router.get('/programs', masterController.getPrograms);
+
+// Quotas
+router.post('/quotas', masterController.createQuota);
+router.get('/quotas', masterController.getQuotas);
+router.put('/quotas/:quota_id', masterController.updateQuota);
+
+
+
+// ============================================
 // APPLICANT ROUTES
 // ============================================
 
