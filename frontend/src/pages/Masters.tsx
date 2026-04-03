@@ -83,11 +83,6 @@ export default function Masters() {
     e.currentTarget.reset();
   };
 
-  console.log('Institutions:', institutions);
-  console.log('Campuses:', campuses);
-  console.log('Departments:', departments);
-  console.log('Programs:', programs);
-  console.log('Quotas:', quotas);
 
   return (
     <div className="space-y-6">
